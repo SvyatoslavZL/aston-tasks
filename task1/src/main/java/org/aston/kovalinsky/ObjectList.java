@@ -28,13 +28,14 @@ public class ObjectList<E> implements Listable<E> {
     private static final int DEFAULT_CAPACITY = 10;
     private static final int CAPACITY_MULTIPLIER = 2;
 
-    private int capacity = DEFAULT_CAPACITY;
     private int size = 0;
     private Object[] listData = new Object[DEFAULT_CAPACITY];
 
 
     /**
      * Appends the specified element to the end of this list.
+     * After adding an element, if the size and length of the list array are the same,
+     * the capacity of the sheet is increased
      *
      * @param elementToAdd element to be appended to this list
      */
@@ -50,7 +51,7 @@ public class ObjectList<E> implements Listable<E> {
     /**
      * Inserts the specified element at the specified position in this list.
      * If the index is occupied by another element, it shifts it and all
-     * subsequent elements to the right.
+     * subsequent elements to the right and then inserts the element.
      *
      * @param index        index at which the specified element is to be inserted
      * @param elementToAdd element to be inserted
@@ -118,7 +119,7 @@ public class ObjectList<E> implements Listable<E> {
         for (int i = index; i < size - 1; i++) {
             listData[i] = listData[i + 1];
         }
-        size--;
+        listData[--size] = null;
     }
 
     /**
@@ -127,7 +128,9 @@ public class ObjectList<E> implements Listable<E> {
      */
     @Override
     public void clear() {
-        Arrays.fill(listData, null);
+        for (int i = 0; i < size; i++) {
+            listData[i] = null;
+        }
         size = 0;
     }
 
@@ -154,13 +157,6 @@ public class ObjectList<E> implements Listable<E> {
     @Override
     public Object[] toArray() {
         return Arrays.copyOf(listData, size);
-    }
-
-    /**
-     * @return the capacity of the array that uses this list
-     */
-    public int capacity() {
-        return capacity;
     }
 
     /**
@@ -192,7 +188,6 @@ public class ObjectList<E> implements Listable<E> {
     }
 
     private void increaseCapacity() {
-        capacity *= CAPACITY_MULTIPLIER;
         Object[] newListData = new Object[listData.length * CAPACITY_MULTIPLIER];
         System.arraycopy(listData, 0, newListData, 0, listData.length);
         listData = newListData;
