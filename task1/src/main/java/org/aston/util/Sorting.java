@@ -1,4 +1,4 @@
-package org.aston.kovalinsky;
+package org.aston.util;
 
 import java.util.Comparator;
 

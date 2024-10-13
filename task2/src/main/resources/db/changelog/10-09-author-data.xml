@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.27.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="1728556710725-1" author="SvyatoslavZL">
+        <insert tableName="author">
+            <column name="firs_name">Edmond</column>
+            <column name="last_name">Hamilton</column>
+        </insert>
+        <insert tableName="author">
+            <column name="firs_name">Bruce</column>
+            <column name="last_name">Eckel</column>
+        </insert>
+        <insert tableName="author">
+            <column name="firs_name">Alexander</column>
+            <column name="last_name">Pushkin</column>
+        </insert>
+        <insert tableName="author">
+            <column name="firs_name">Isaac</column>
+            <column name="last_name">Asimov</column>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
