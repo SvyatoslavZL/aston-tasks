@@ -1,4 +1,4 @@
-package org.aston.kovalinsky;
+package org.aston.util;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;

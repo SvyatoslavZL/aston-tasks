@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.27.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="1728559657539-1" author="SvyatoslavZL">
+        <insert tableName="book">
+            <column name="author_id">1</column>
+            <column name="title">The Star Kings</column>
+            <column name="genre">Science fiction</column>
+            <column name="year">1949</column>
+        </insert>
+        <insert tableName="book">
+            <column name="author_id">2</column>
+            <column name="title">Thinking in Java</column>
+            <column name="genre">Non-fiction</column>
+            <column name="year">1998</column>
+        </insert>
+        <insert tableName="book">
+            <column name="author_id">3</column>
+            <column name="title">The Captain's Daughter</column>
+            <column name="genre">Novel</column>
+            <column name="year">1836</column>
+        </insert>
+        <insert tableName="book">
+            <column name="author_id">4</column>
+            <column name="title">The Gods Themselves</column>
+            <column name="genre">Science fiction</column>
+            <column name="year">1972</column>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

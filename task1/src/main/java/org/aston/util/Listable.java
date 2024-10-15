@@ -1,4 +1,4 @@
-package org.aston.kovalinsky;
+package org.aston.util;
 
 /**
  * <p>The custom {@code List} with limited functionality.
