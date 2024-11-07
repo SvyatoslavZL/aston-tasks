@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.27.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="1728555965050-7" author="SvyatoslavZL">
+        <addForeignKeyConstraint baseColumnNames="author_id" baseTableName="book"
+                                 constraintName="FK_BOOK_ON_AUTHOR"
+                                 referencedColumnNames="id" referencedTableName="author"/>
+    </changeSet>
+    <changeSet id="1728555965050-11" author="SvyatoslavZL">
+        <addForeignKeyConstraint baseColumnNames="book_id" baseTableName="user_book"
+                                 constraintName="fk_user-book_on_book"
+                                 referencedColumnNames="id" referencedTableName="book"/>
+    </changeSet>
+    <changeSet id="1728555965050-12" author="SvyatoslavZL">
+        <addForeignKeyConstraint baseColumnNames="users_id" baseTableName="user_book"
+                                 constraintName="fk_user-book_on_user"
+                                 referencedColumnNames="id" referencedTableName="users"/>
+    </changeSet>
+
+</databaseChangeLog>

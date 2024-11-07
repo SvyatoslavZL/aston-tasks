@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.27.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="1728557318461-1" author="SvyatoslavZL">
+        <insert tableName="users">
+            <column name="login">Alex</column>
+            <column name="password">admin</column>
+            <column name="role">ADMIN</column>
+            <column name="address">Yaroslavl-st.Svobody-58</column>
+            <column name="email">alexadmin@gmail.ru</column>
+            <column name="phone_number">8-959-832-34-43</column>
+        </insert>
+        <insert tableName="users">
+            <column name="login">Daniel</column>
+            <column name="password">qwerty</column>
+            <column name="role">USER</column>
+            <column name="address">Velsk-st.Dzerzhinskogo-70</column>
+            <column name="email">dansawmill@mail.ru</column>
+            <column name="phone_number">8-905-127-95-02</column>
+        </insert>
+        <insert tableName="users">
+            <column name="login">Ilya</column>
+            <column name="password">user</column>
+            <column name="role">USER</column>
+            <column name="address">Lipetsk-st.Tsiolkovskogo-17</column>
+            <column name="email">lipking@gmail.ru</column>
+            <column name="phone_number">8-918-990-44-16</column>
+        </insert>
+        <insert tableName="users">
+            <column name="login">Andrew</column>
+            <column name="password">123</column>
+            <column name="role">USER</column>
+            <column name="address">NaberezhnieChelny-MiraProspect-26</column>
+            <column name="email">andrewnow123@mail.ru</column>
+            <column name="phone_number">8-905-773-23-68</column>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
